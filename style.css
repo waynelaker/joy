@@ -1,0 +1,208 @@
+/* Design System: The Joyful Times - Final Edition */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400&family=UnifrakturMaguntia&family=Old+Standard+TT:ital,wght@0,400;0,700;1,400&display=swap');
+
+:root {
+  --ink: #2c2c2c;
+  --paper: #f4ecd8;
+  --accent: #8b0000;
+  --shadow: rgba(0,0,0,0.1);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: #dcd1b3;
+  background-image: url('vintage_newspaper_texture_1780651650665.png');
+  background-attachment: fixed;
+  font-family: 'Old Standard TT', serif;
+  color: var(--ink);
+  line-height: 1.4;
+  padding: 2rem 1rem;
+}
+
+.newspaper-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  background: var(--paper);
+  background-image: url('vintage_newspaper_texture_1780651650665.png');
+  padding: 3rem;
+  box-shadow: 0 20px 50px rgba(0,0,0,0.3);
+  position: relative;
+  min-height: 100vh;
+  border: 1px solid #c5b48e;
+}
+
+/* Header & Masthead */
+header {
+  border-bottom: 4px double var(--ink);
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.masthead {
+  padding: 1rem 0;
+}
+
+.masthead-img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+
+.sub-header {
+  display: flex;
+  justify-content: space-between;
+  padding: 0.5rem 0;
+  border-top: 1px solid var(--ink);
+  border-bottom: 1px solid var(--ink);
+  text-transform: uppercase;
+  font-weight: bold;
+  letter-spacing: 2px;
+  font-size: 0.9rem;
+}
+
+/* Headlines */
+.main-headline {
+  font-family: 'Playfair Display', serif;
+  font-weight: 900;
+  font-size: 4.5rem;
+  text-align: center;
+  line-height: 1;
+  margin: 1.5rem 0;
+  text-transform: uppercase;
+  border-bottom: 1px solid var(--ink);
+  padding-bottom: 1rem;
+}
+
+.secondary-headline {
+  font-family: 'Playfair Display', serif;
+  font-weight: 700;
+  font-size: 1.8rem;
+  margin-bottom: 0.8rem;
+  line-height: 1.1;
+  border-bottom: 1px solid #ccc;
+  padding-bottom: 0.3rem;
+  margin-top: 1rem;
+}
+
+/* Layout */
+.news-grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr;
+  gap: 2.5rem;
+}
+
+article {
+  margin-bottom: 2rem;
+}
+
+.article-content {
+  column-count: 2;
+  column-gap: 1.5rem;
+  text-align: justify;
+}
+
+.sidebar .article-content {
+  column-count: 1;
+}
+
+/* Drop Cap */
+.drop-cap::first-letter {
+    float: left;
+    font-size: 4.2rem;
+    line-height: 1;
+    margin: 0.1em 0.1em 0.1em 0;
+    font-family: 'Playfair Display', serif;
+    font-weight: 900;
+    color: var(--accent);
+}
+
+p {
+  margin-bottom: 1rem;
+  font-size: 1.1rem;
+}
+
+/* Images */
+.featured-image {
+  width: 100%;
+  border: 1px solid #000;
+  padding: 5px;
+  background: #fff;
+  margin-bottom: 0.5rem;
+  filter: sepia(0.2) contrast(1.1) grayscale(0.5);
+}
+
+.bw-photo {
+    filter: grayscale(1) contrast(1.2) sepia(0.1) !important;
+}
+
+.caption {
+  font-size: 0.8rem;
+  font-style: italic;
+  text-align: center;
+  margin-bottom: 1.5rem;
+  border-bottom: 1px solid #ddd;
+  padding-bottom: 0.5rem;
+  display: block;
+}
+
+/* Special Sections */
+.quote-box {
+  background: rgba(0,0,0,0.05);
+  padding: 1.2rem;
+  border-left: 5px solid var(--accent);
+  margin: 1rem 0;
+  font-style: italic;
+  font-size: 1.1rem;
+}
+
+.gymnastic-badge {
+    background: var(--ink);
+    color: var(--paper);
+    padding: 0.5rem;
+    display: inline-block;
+    font-weight: bold;
+    margin-top: 1rem;
+    text-transform: uppercase;
+    font-size: 0.8rem;
+}
+
+.children-list {
+    list-style: none;
+    padding: 0;
+}
+
+.children-list li {
+    padding: 0.4rem 0;
+    border-bottom: 1px dotted #ccc;
+    font-weight: bold;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .news-grid {
+    grid-template-columns: 1fr;
+  }
+  .main-headline {
+    font-size: 3rem;
+  }
+}
+
+.birthday-banner {
+    position: fixed;
+    top: 20px;
+    right: -50px;
+    background: var(--accent);
+    color: white;
+    padding: 10px 60px;
+    transform: rotate(45deg);
+    font-weight: bold;
+    z-index: 2000;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+    cursor: pointer;
+}

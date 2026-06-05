@@ -1,0 +1,3 @@
+// Image provided by user is handled via system context. 
+// I will refer to it as 'joy_mike_real.png' in the code.
+// For now, I'll create a placeholder if it doesn't exist, but typically I'd use the provided path.
